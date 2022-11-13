@@ -28,7 +28,8 @@ export const ListItem = styled.li`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: ${props => props.theme.borders.normal} #eee;
+  border: ${props => props.theme.borders.normal};
+  border-color: ${props => props.theme.colors.great}
 `;
 
 export const StatHeading = styled.span`

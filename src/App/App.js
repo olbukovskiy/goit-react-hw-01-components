@@ -14,7 +14,19 @@ import { TransactionHistory } from '../TransactionHistory/TransactionHistory';
 import transactions from '../transactions.json';
 
 function App() {
-  return <Profile user={user}></Profile>;
+  return (
+    <Box width="768px" ml="auto" mr="auto">
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      ></Profile>
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
+    </Box>
+  );
 }
 
 export default App;

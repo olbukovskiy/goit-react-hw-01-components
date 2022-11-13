@@ -11,15 +11,7 @@ import {
   ListItem,
 } from './Profile.styled';
 
-export function Profile({
-  user: {
-    username,
-    tag,
-    location,
-    avatar,
-    stats: { followers, views, likes },
-  },
-}) {
+export function Profile({ username, tag, location, avatar, stats }) {
   return (
     <Box
       width="300px"
@@ -64,15 +56,15 @@ export function Profile({
       >
         <ListItem>
           <StatHeading>Followers</StatHeading>
-          <StatItem>{followers}</StatItem>
+          <StatItem>{stats.followers}</StatItem>
         </ListItem>
         <ListItem>
           <StatHeading>Views</StatHeading>
-          <StatItem>{views}</StatItem>
+          <StatItem>{stats.views}</StatItem>
         </ListItem>
         <ListItem>
           <StatHeading>Likes</StatHeading>
-          <StatItem>{likes}</StatItem>
+          <StatItem>{stats.likes}</StatItem>
         </ListItem>
       </Box>
     </Box>
@@ -80,11 +72,9 @@ export function Profile({
 }
 
 Profile.propTypes = {
-  username: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  avatar: PropTypes.string,
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes: PropTypes.number,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.objectOf(PropTypes.number).isRequired,
 };
