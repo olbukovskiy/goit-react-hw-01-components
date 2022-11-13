@@ -21,7 +21,15 @@ export function Profile({
   },
 }) {
   return (
-    <Box width="300px" height="100%" border="normal" borderColor="great">
+    <Box
+      width="300px"
+      maxHeight="100%"
+      border="normal"
+      borderColor="great"
+      ml="auto"
+      mr="auto"
+      mt="20px"
+    >
       <Box
         display="flex"
         alignItems="center"
