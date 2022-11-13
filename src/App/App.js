@@ -1,11 +1,20 @@
 import './App.css';
-import { Profile } from './Profile/Profile.js';
-import { Statistics } from './Statistics/Statistics.js';
-import { FriendList } from './FriendList/FriendList.js';
-import { TransactionHistory } from './TransactionHistory/TransactionHistory.js';
+import Box from 'Box';
+
+import { Profile } from '../Profile/Profile';
+import user from '../user.json';
+
+import { Statistics } from '../Statistics/Statistics';
+import data from '../data.json';
+
+import { FriendList } from '../FriendList/FriendList';
+import friends from '../friends.json';
+
+import { TransactionHistory } from '../TransactionHistory/TransactionHistory';
+import transactions from '../transactions.json';
 
 function App() {
-  return;
+  return <Profile user={user}></Profile>;
 }
 
 export default App;
