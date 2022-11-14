@@ -15,7 +15,7 @@ import transactions from '../transactions.json';
 
 function App() {
   return (
-    <Box width="768px" ml="auto" mr="auto">
+    <Box width="768px" ml="auto" mr="auto" display="grid" gridRowGap={5}>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -26,6 +26,7 @@ function App() {
       <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
       <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </Box>
   );
 }

@@ -11,7 +11,7 @@ import {
 
 export function Statistics({ stats, title = '' }) {
   return (
-    <Box as="section" mb="30px">
+    <Box as="section">
       {title && <StatListHeader>{title}</StatListHeader>}
 
       <StatList as="ul">

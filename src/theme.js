@@ -27,6 +27,7 @@ export const theme = {
     bg: '#f5f4fa',
     green: 'green',
     red: 'red',
+    tableBg: '#1b1e24',
   },
   borders: {
     none: 'none',

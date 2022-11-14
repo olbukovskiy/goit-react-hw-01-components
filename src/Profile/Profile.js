@@ -9,6 +9,7 @@ import {
   StatItem,
   StatHeading,
   ListItem,
+  ProfileList,
 } from './Profile.styled';
 
 export function Profile({ username, tag, location, avatar, stats }) {
@@ -40,19 +41,7 @@ export function Profile({ username, tag, location, avatar, stats }) {
         <Location>{location}</Location>
       </Box>
 
-      <Box
-        as="ul"
-        display="grid"
-        justifyContent="center"
-        gridTemplateColumns="1fr 1fr 1fr"
-        gridTemplateRows="repeat(1, 100px)"
-        width="100%"
-        height="20%"
-        fontSize={2}
-        lineHeight="body"
-        color="bckg"
-        bg="bg"
-      >
+      <ProfileList>
         <ListItem>
           <StatHeading>Followers</StatHeading>
           <StatItem>{stats.followers}</StatItem>
@@ -65,7 +54,7 @@ export function Profile({ username, tag, location, avatar, stats }) {
           <StatHeading>Likes</StatHeading>
           <StatItem>{stats.likes}</StatItem>
         </ListItem>
-      </Box>
+      </ProfileList>
     </Box>
   );
 }
