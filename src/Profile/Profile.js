@@ -20,7 +20,6 @@ export function Profile({ username, tag, location, avatar, stats }) {
       borderColor="great"
       ml="auto"
       mr="auto"
-      mt="20px"
     >
       <Box
         display="flex"

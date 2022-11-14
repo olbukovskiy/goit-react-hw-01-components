@@ -25,6 +25,8 @@ export const theme = {
     muted: '#f6f6f6',
     bckg: '#757575',
     bg: '#f5f4fa',
+    green: 'green',
+    red: 'red',
   },
   borders: {
     none: 'none',

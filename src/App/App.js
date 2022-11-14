@@ -25,6 +25,7 @@ function App() {
       ></Profile>
       <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
+      <FriendList friends={friends} />
     </Box>
   );
 }
