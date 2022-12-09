@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from 'Box';
 import PropTypes from 'prop-types';
+
 import {
   StatListItem,
   DocType,
@@ -9,17 +10,16 @@ import {
   StatListHeader,
 } from './Statistics.styled';
 
+const getRandomHexColor = function () {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+};
+
 export function Statistics({ stats, title = '' }) {
   return (
     <Box as="section">
       {title && <StatListHeader>{title}</StatListHeader>}
-
       <StatList as="ul">
         {stats.map(({ id, label, percentage }) => {
-          function getRandomHexColor() {
-            return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-          }
-
           return (
             <StatListItem backgroundColor={getRandomHexColor()} key={id}>
               <DocType>{label}</DocType>

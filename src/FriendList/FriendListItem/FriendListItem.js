@@ -1,5 +1,6 @@
-import { PropTypes } from 'prop-types';
 import React from 'react';
+import { PropTypes } from 'prop-types';
+
 import {
   FriendsListItem,
   Status,
@@ -10,7 +11,7 @@ import {
 export function FriendListItem({ name, avatarUrl, isOnline }) {
   return (
     <FriendsListItem>
-      <Status isOnline={isOnline}></Status>
+      <Status isOnline={isOnline} />
       <FriendAvatar src={avatarUrl} alt="User avatar" width="48" />
       <Name>{name}</Name>
     </FriendsListItem>
